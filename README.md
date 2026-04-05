@@ -1,4 +1,4 @@
-# Exoplanet Transit Orbital Analysis
+# Observational Astrophysics Analysis Using CCD Imaging Data and Exoplanet Transit Photometry
 
 ## Overview
 
