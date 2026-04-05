@@ -63,7 +63,9 @@ The light curve shows consistent periodic dips in brightness, indicating a trans
 
 3. Run the notebook:
 
-jupyter notebook exoplanet-transit-orbital-analysis.ipynb
+   ```
+   jupyter notebook exoplanet-transit-orbital-analysis.ipynb
+   ```
 
 ---
 
