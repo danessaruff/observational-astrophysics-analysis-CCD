@@ -46,7 +46,7 @@ The light curve shows consistent periodic dips in brightness, indicating a trans
 ![Folded Light Curve](folded_light_curve.png)
 
 ### RGB Composite Image
-![RGB Composite](rgb_composite.png)
+![RGB Composite](RGB_composite.png)
 
 ---
 
