@@ -1,103 +1,92 @@
-CCD Imaging and Photometric Analysis of M1
-Overview
+# Exoplanet Transit Orbital Analysis
 
-This project analyzes CCD imaging and photometric data to study image calibration, multi-filter imaging, and exoplanet transit behavior. By applying standard reduction techniques and photometric analysis, the dataset is used to examine both the structure of an astronomical object and variations in stellar brightness over time.
+## Overview
 
-Why This Matters
+This project analyzes real light curve data from NASA’s TESS mission to detect and characterize an exoplanet using transit photometry. The analysis identifies periodic dips in stellar brightness and estimates key orbital and physical properties of the planet.
 
-CCD imaging is fundamental to modern observational astronomy. Accurate calibration is required to remove instrumental effects and recover true astrophysical signals. Multi-filter imaging provides information across different wavelengths, while photometric measurements allow detection and characterization of phenomena such as exoplanet transits.
+---
 
-Methods
+## Why This Matters
 
-Loaded CCD images in multiple filters (B, V, r)
-Applied bias subtraction, dark correction, and flat-fielding
-Constructed reduced images for each filter
-Combined images into an RGB composite
-Used photometric measurements to calculate relative flux
-Generated a light curve from time-series data
-Identified a transit event in the light curve
-Modeled the transit using a box-shaped function
-Estimated transit depth, duration, and signal-to-noise
+Transit photometry allows small changes in a star’s brightness to be measured over time, making it possible to detect exoplanets and estimate their orbital and physical properties.
 
-Results
-Image Calibration
+---
 
-The reduction process removes background artifacts and corrects for instrumental effects, producing cleaner and more uniform images.
+## Methods
 
-Multi-Filter Imaging
+* Loaded and cleaned time-series light curve data from TESS
+* Applied detrending to remove long-term stellar variability
+* Identified transit events using flux thresholding
+* Estimated orbital period using regression on transit times
+* Folded the light curve to enhance periodic signals
+* Modeled the transit using a box-shaped function
+* Performed residual analysis to evaluate model fit
+* Estimated physical parameters using standard orbital relations
 
-The RGB composite reveals structure across wavelengths, highlighting differences captured by each filter.
+---
 
-Light Curve Analysis
+## Results
 
-The light curve shows a clear decrease in flux during the transit event, indicating a measurable change in brightness over time.
+* Estimated orbital period: **4.7227 ± 0.0019 days**
+* Transit depth: **0.00577 ± 0.00017**
+* Transit duration: **4.03 ± 0.03 hours**
+* Estimated planet radius: **1.42 ± 0.05 R_J**
+* Estimated semi-major axis: **0.0625 ± 0.0011 AU**
 
-Transit Properties
+The light curve shows consistent periodic dips in brightness, indicating a transiting exoplanet candidate. The derived parameters are consistent with a short-period gas giant (hot Jupiter-type planet).
 
-Estimated transit depth: ~0.005–0.006 (normalized flux)
-Estimated transit duration: ~4 hours
-Signal-to-noise ratio indicates a detectable transit signal
+---
 
-The results show consistent image calibration and a clear photometric signal, demonstrating the ability to extract physical information from observational data.
+## Result Visualizations
 
-Important Note on Analysis
+### Normalized Light Curve
+![Normalized Light Curve](normalization_light_curve.png)
 
-The transit model used is a simplified box approximation. While effective for estimating depth and duration, it does not capture detailed physical effects such as limb darkening or full orbital geometry.
+### Folded Light Curve
+![Folded Light Curve](folded_tessb_light_curve.png)
 
-Visualizations
-Raw vs Calibrated Images
+### Transit Model Fit
+![Transit Model](transit_model_fit.png)
 
-Calibration Comparison
+---
 
-RGB Composite Image
+## How to Run
 
-RGB Composite
+1. Clone the repository
 
-Light Curve
+2. Install required Python libraries:
 
-Light Curve Plot
+   * NumPy
+   * Pandas
+   * Matplotlib
+   * SciPy
 
-Transit Model Fit
+3. Run the notebook:
 
-Transit Fit
+jupyter notebook exoplanet-transit-orbital-analysis.ipynb
 
-How to Run
+---
 
-Clone the repository
+## Tools Used
 
-Install required libraries:
+* Python
+* NumPy
+* Pandas
+* Matplotlib
+* SciPy
 
-NumPy
-Pandas
-Matplotlib
-Astropy
+---
 
-Ensure all FITS images and photometry files are in the project directory
+## Future Improvements
 
-Run:
+* Implement a more realistic transit model beyond the box approximation
+* Include formal uncertainty propagation and error analysis
+* Compare results with confirmed exoplanet catalog values
+* Extend analysis to multiple light curves
 
-jupyter notebook observational-astrophysics-analysis-CCD.ipynb
+---
 
-Tools Used
+## Author
 
-Python
-NumPy
-Pandas
-Matplotlib
-Astropy
-DS9
-AstroImageJ
-
-Future Improvements
-
-Implement a physically motivated transit model
-Perform full uncertainty propagation
-Incorporate atmospheric extinction corrections
-Analyze multi-filter data quantitatively
-Extend analysis to additional datasets
-
-Author
-
-Danessa Ruff
-
+Danessa Ruff  
 Michigan State University
