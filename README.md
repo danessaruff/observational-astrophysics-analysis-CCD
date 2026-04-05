@@ -39,14 +39,14 @@ The light curve shows consistent periodic dips in brightness, indicating a trans
 
 ## Result Visualizations
 
-### Normalized Light Curve
-![Normalized Light Curve](normalization_light_curve.png)
+### Light Curve with Transit Detection
+![Light Curve](light_curve.png)
 
 ### Folded Light Curve
-![Folded Light Curve](folded_tessb_light_curve.png)
+![Folded Light Curve](folded_light_curve.png)
 
-### Transit Model Fit
-![Transit Model](transit_model_fit.png)
+### RGB Composite Image
+![RGB Composite](rgb_composite.png)
 
 ---
 
